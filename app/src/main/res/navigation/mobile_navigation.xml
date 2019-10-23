@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/generateQuestion">
+
+    <fragment
+        android:id="@+id/addQuestion"
+        android:name="com.example.questiongenerator.AddQuestion"
+        android:label="Add Question"
+        tools:layout="@layout/fragment_add_question" />
+
+    <fragment
+        android:id="@+id/deleteQuestion"
+        android:name="com.example.questiongenerator.DeleteQuestion"
+        android:label="Delete Question"
+        tools:layout="@layout/fragment_delete_question" />
+
+    <fragment
+        android:id="@+id/generateQuestion"
+        android:name="com.example.questiongenerator.GenerateQuestion"
+        android:label="Generate Question Paper"
+        tools:layout="@layout/fragment_generate_question" />
+
+</navigation>

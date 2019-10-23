@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/generateQuestion"
+            android:icon="@drawable/ic_question"
+            android:title="Generate Question Paper" />
+        <item
+            android:id="@+id/addQuestion"
+            android:icon="@drawable/ic_add"
+            android:title="Add Question" />
+        <item
+            android:id="@+id/deleteQuestion"
+            android:icon="@drawable/ic_delete"
+            android:title="Delete Question" />
+    </group>
+</menu>
