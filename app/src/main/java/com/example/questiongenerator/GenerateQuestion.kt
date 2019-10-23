@@ -33,9 +33,9 @@ class GenerateQuestion : Fragment() {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_generate_question, container, false)
         root.submit.setOnClickListener {
-            if (Integer.valueOf(hardCount.text.toString()) * 30 +
-                Integer.valueOf(mediumCount.text.toString()) * 20 +
-                Integer.valueOf(easyCount.text.toString()) * 10 == 100
+            if (Integer.valueOf(hardCount.text.toString()) * 3 +
+                Integer.valueOf(mediumCount.text.toString()) * 2 +
+                Integer.valueOf(easyCount.text.toString()) * 1 == 100
             ) {
                 hard = Integer.valueOf(hardCount.text.toString())
                 medium = Integer.valueOf(mediumCount.text.toString())
