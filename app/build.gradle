@@ -7,6 +7,14 @@ apply plugin: "kotlin-kapt"
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        config {
+            storeFile file('C:/KeyStore/vaibhavmittal.jks')
+            storePassword 'vaibhavmittal'
+            keyAlias = 'project'
+            keyPassword 'vaibhavmittal'
+        }
+    }
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.questiongenerator"
@@ -24,6 +32,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
 }
