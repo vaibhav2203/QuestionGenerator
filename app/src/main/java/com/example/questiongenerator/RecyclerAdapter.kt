@@ -10,12 +10,18 @@ import com.example.questiongenerator.Database.Database
 import com.example.questiongenerator.Database.Question
 import kotlinx.android.synthetic.main.layout_row.view.*
 
+/*
+* Recycler adapter which provides views for deleting the question
+* */
 class RecyclerAdapter(
     val items: ArrayList<Question>,
     val activity: FragmentActivity,
     val recyclerView: RecyclerView
 ) : RecyclerView.Adapter<RecyclerAdapter.holder>() {
 
+    /*
+    * facilitates the options for feeding in values to a particular row in the layout.
+    * */
     override fun onBindViewHolder(holder: holder, position: Int) {
         if (recyclerView.id != R.id.deleteLayout) {
             holder.delete.visibility = View.GONE
@@ -49,14 +55,23 @@ class RecyclerAdapter(
         }
     }
 
+    /*
+    * return the total item count of the recycler view
+    * */
     override fun getItemCount(): Int {
         return items.size
     }
 
+    /*
+    *
+    * provides the layout for each view*/
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): holder {
         return holder(LayoutInflater.from(activity).inflate(R.layout.layout_row, parent, false))
     }
 
+    /*
+    * holder class that stores the views for each row.
+    * */
     inner class holder(view: View) : RecyclerView.ViewHolder(view) {
         val question = view.question
         val option1 = view.option1

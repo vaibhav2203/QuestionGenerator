@@ -14,13 +14,18 @@ import com.example.questiongenerator.Database.Question
 import kotlinx.android.synthetic.main.fragment_add_question.view.*
 
 /**
- * A simple [Fragment] subclass.
+ * A simple [Fragment] subclass for adding question
  */
 class AddQuestion : Fragment() {
 
     var difficulty = arrayOf("Select One", "Easy", "Medium", "Hard")
     var option = arrayOf("Select One", "1", "2", "3", "4")
 
+
+    /*
+    * gets called when fragment is displayed in the activity
+    * lifecycle spans throughout the activity
+    * */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -62,7 +67,7 @@ class AddQuestion : Fragment() {
                 val question = Question()
                 question.detail = root.question.text.toString()
                 question.difficulty = root.difficultySpinner.selectedItemId
-                var questionID = Database.getInstance(activity!!.applicationContext)?.tableDao()
+                val questionID = Database.getInstance(activity!!.applicationContext)?.tableDao()
                     ?.addQuestion(question)
                 val answers = Array<Answer>(4) { Answer() }
                 answers[0].detail = root.option1.text.toString()

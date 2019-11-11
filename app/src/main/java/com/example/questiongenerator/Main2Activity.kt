@@ -12,9 +12,15 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 
+/*
+* navigation activity for the app which provides optinos of deleting a question, adding a question, etc.
+* */
 class Main2Activity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    /*
+    * gets called when the activity is created
+    * */
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

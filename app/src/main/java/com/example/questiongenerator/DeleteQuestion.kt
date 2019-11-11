@@ -12,12 +12,16 @@ import com.example.questiongenerator.Database.Question
 import kotlinx.android.synthetic.main.fragment_delete_question.view.*
 
 /**
- * A simple [Fragment] subclass.
+ * A simple [Fragment] subclass to delete qustinos from database.
  */
 class DeleteQuestion : Fragment() {
 
     lateinit var adapterRecycler: RecyclerAdapter
     lateinit var questions: ArrayList<Question>
+    /*
+    * gets called when fragment is displayed in the activity
+    * lifecycle spans throughout the activity
+    * */
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

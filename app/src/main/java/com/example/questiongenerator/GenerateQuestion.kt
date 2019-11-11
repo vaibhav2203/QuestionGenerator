@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_generate_question.*
 import kotlinx.android.synthetic.main.fragment_generate_question.view.*
 
 /**
- * A simple [Fragment] subclass.
+ * A simple [Fragment] subclass to generate questions required for a question paper.
  */
 class GenerateQuestion : Fragment() {
 
@@ -25,6 +25,10 @@ class GenerateQuestion : Fragment() {
     private lateinit var mediumQuestions: ArrayList<Question>
     private lateinit var easyQuestions: ArrayList<Question>
     private lateinit var totalCaptureResult: ArrayList<Question>
+    /*
+    * gets called when fragment is displayed in the activity
+    * lifecycle spans throughout the activity
+    * */
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
