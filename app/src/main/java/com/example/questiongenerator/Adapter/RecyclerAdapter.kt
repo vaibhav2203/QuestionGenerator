@@ -1,4 +1,4 @@
-package com.example.questiongenerator
+package com.example.questiongenerator.Adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.questiongenerator.Database.Answer
 import com.example.questiongenerator.Database.Database
 import com.example.questiongenerator.Database.Question
+import com.example.questiongenerator.R
 import kotlinx.android.synthetic.main.layout_row.view.*
 
 /*

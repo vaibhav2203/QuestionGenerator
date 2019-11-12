@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/addQuestion"
-        android:name="com.example.questiongenerator.AddQuestion"
+        android:name="com.example.questiongenerator.Fragment.AddQuestion"
         android:label="Add Question"
         tools:layout="@layout/fragment_add_question" />
 
     <fragment
         android:id="@+id/deleteQuestion"
-        android:name="com.example.questiongenerator.DeleteQuestion"
+        android:name="com.example.questiongenerator.Fragment.DeleteQuestion"
         android:label="Delete Question"
         tools:layout="@layout/fragment_delete_question" />
 
     <fragment
         android:id="@+id/generateQuestion"
-        android:name="com.example.questiongenerator.GenerateQuestion"
+        android:name="com.example.questiongenerator.Fragment.GenerateQuestion"
         android:label="Generate Question Paper"
         tools:layout="@layout/fragment_generate_question" />
 

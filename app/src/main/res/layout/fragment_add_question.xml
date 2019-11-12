@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:padding="10dp"
-    tools:context=".AddQuestion">
+    tools:context=".Fragment.AddQuestion">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.example.questiongenerator
+package com.example.questiongenerator.Fragment
 
 
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import com.example.questiongenerator.Database.Answer
 import com.example.questiongenerator.Database.Database
 import com.example.questiongenerator.Database.Question
+import com.example.questiongenerator.R
 import kotlinx.android.synthetic.main.fragment_add_question.view.*
 
 /**

@@ -1,7 +1,6 @@
-package com.example.questiongenerator
+package com.example.questiongenerator.Activity
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
@@ -10,6 +9,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.questiongenerator.R
 import com.google.android.material.navigation.NavigationView
 
 /*
@@ -35,7 +35,9 @@ class Main2Activity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.addQuestion, R.id.deleteQuestion, R.id.generateQuestion
+                R.id.addQuestion,
+                R.id.deleteQuestion,
+                R.id.generateQuestion
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

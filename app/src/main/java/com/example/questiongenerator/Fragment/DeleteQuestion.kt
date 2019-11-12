@@ -1,4 +1,4 @@
-package com.example.questiongenerator
+package com.example.questiongenerator.Fragment
 
 
 import android.os.Bundle
@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.questiongenerator.Database.Database
 import com.example.questiongenerator.Database.Question
+import com.example.questiongenerator.R
+import com.example.questiongenerator.Adapter.RecyclerAdapter
 import kotlinx.android.synthetic.main.fragment_delete_question.view.*
 
 /**
@@ -30,7 +32,12 @@ class DeleteQuestion : Fragment() {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_delete_question, container, false)
         questions = Database.getInstance(activity!!)?.tableDao()?.getQuestions() as ArrayList<Question>
-        adapterRecycler = RecyclerAdapter(questions,activity!!, root.deleteLayout)
+        adapterRecycler =
+            RecyclerAdapter(
+                questions,
+                activity!!,
+                root.deleteLayout
+            )
         root.deleteLayout.layoutManager = LinearLayoutManager(activity!!, LinearLayoutManager.VERTICAL, false)
         root.deleteLayout.adapter = adapterRecycler
         return root

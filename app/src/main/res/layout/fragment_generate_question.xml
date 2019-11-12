@@ -6,7 +6,7 @@
     android:layout_margin="10dp"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".GenerateQuestion">
+    tools:context=".Fragment.GenerateQuestion">
 
     <TextView
 

@@ -1,4 +1,4 @@
-package com.example.questiongenerator
+package com.example.questiongenerator.Fragment
 
 
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.questiongenerator.Database.Database
 import com.example.questiongenerator.Database.Question
+import com.example.questiongenerator.R
+import com.example.questiongenerator.Adapter.RecyclerAdapter
 import kotlinx.android.synthetic.main.fragment_generate_question.*
 import kotlinx.android.synthetic.main.fragment_generate_question.view.*
 
@@ -37,9 +39,7 @@ class GenerateQuestion : Fragment() {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_generate_question, container, false)
         root.submit.setOnClickListener {
-            if (Integer.valueOf(hardCount.text.toString()) * 3 +
-                Integer.valueOf(mediumCount.text.toString()) * 2 +
-                Integer.valueOf(easyCount.text.toString()) * 1 == 100
+            if (true
             ) {
                 hard = Integer.valueOf(hardCount.text.toString())
                 medium = Integer.valueOf(mediumCount.text.toString())
@@ -64,7 +64,11 @@ class GenerateQuestion : Fragment() {
                     root.countLayout.visibility = View.GONE
                     root.questionPaper.visibility = View.VISIBLE
                     val recyclerAdapter =
-                        RecyclerAdapter(totalCaptureResult, activity!!, root.questionPaper)
+                        RecyclerAdapter(
+                            totalCaptureResult,
+                            activity!!,
+                            root.questionPaper
+                        )
                     root.questionPaper.layoutManager =
                         LinearLayoutManager(activity!!, LinearLayoutManager.VERTICAL, false)
                     root.questionPaper.adapter = recyclerAdapter
